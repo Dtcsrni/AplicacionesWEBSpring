@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ES">
+<head>
+    <link rel="stylesheet" href="./estilo/estilo.css">
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/509945622e.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Gestión de Espacio</title>
+</head>
+<body class="cuerpo">
+    <header class="header">
+        <img src="./img/fondoHotel.jpg" width=100% height=200%>
+        <div class="perfil">
+            <img src="./img/logoHotel.png">
+            <h1 class="titulo">Hotel CUH</h1>
+        </div>
+    </header>
+    <div class="navegacion">
+      <nav>
+  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">|Inicio|</a>
+    <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">|Reservaciones|</a>
+    <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">|Salir|</a>
+  </div>
+</nav>
+   
+    </div>
+<div class="titular">
+<h2>Gestion de Espacio</h2>
+</div>
+<div class="formulario row">
+    <form class="form-horizontal " action="/gestionar.php">
+        <div class="form-group row col-xs-2">
+          <label class="control-label col-sm-2" for="id">Identificador:</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="id" placeholder="El identificador del espacio">
+          </div>
+        </div>
+        <br>
+        <div class="form-group row col-xs-2">
+          <label class="control-label col-sm-2" for="nombre"><i class="fa-sharp fa-solid fa-user"></i> Nombre del espacio:</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="nombre" placeholder="Ingrese el nombre del espacio">
+          </div>
+        </div>
+        <br>
+        <div class="form-group row col-xs-2">
+            <label class="control-label col-sm-2" for="descripcion">Descripcion del espacio</label>
+            <div class="col-sm-10">
+                <textarea id="descripcion" name="descripcion" rows="4" cols="50" placeholder="Ingrese la descripción del espacio"></textarea>
+
+            </div>
+          </div>
+          <br>
+          <div class="form-group row col-xs-2">
+            <label class="control-label col-sm-2" for="cupo_max">Cupo Máximo:</label>
+            <div class="col-sm-10">
+              <input type="number" class="form-control" id="cupo_max" placeholder="Cantidad máxima de asistentes">
+            </div>
+          </div>
+          <br>
+          <div class="form-group row col-xs-2">
+            <label class="control-label col-sm-2" for="cupo_disp">Cupo Disponible:</label>
+            <div class="col-sm-10">
+              <input type="number" class="form-control" id="cupo_disp" placeholder="Cantidad restante de asistentes">
+            </div>
+          </div>
+          <br>
+          <div class="form-group row col-xs-2">
+            <label class="control-label col-sm-2" for="costoxdia">Costo x Día:</label>
+            <div class="col-sm-10">
+              <input type="number" class="form-control" id="costoxdia" placeholder="Costo por evento o día reservado">
+            </div>
+          </div>
+          <br>
+          <div class="form-group row col-xs-2">
+            <label class="control-label col-sm-2" for="disponibilidad">Disponibilidad</label>
+            <div class="col-sm-10">
+                <input type="checkbox" id="disponibilidad" name="disponibilidad" checked="true" >
+            </div>
+          </div>
+          <br>
+          <div class="form-group row col-xs-2">
+            <label class="control-label col-sm-2" for="gestor">Gestor:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="gestor" placeholder="Nombre de gestor asignado actualmente a espacio">
+            </div>
+          </div>
+          <br>
+          <div class="form-group row col-xs-2">
+            <label class="control-label col-sm-2" for="tipoevento">Tipo de Evento</label>
+            <div class="row col-xs-6">
+                <input type="radio" id="html" name="tipoevento" value="Fiesta Infantil">
+                <label for="html">Fiesta Infantil</label><br>
+                <input type="radio" id="css" name="tipoevento" value="Fiesta Familiar">
+                <label for="css">Fiesta Familiar</label><br>
+                <input type="radio" id="javascript" name="tipoevento" value="Concierto">
+                <label for="javascript">Concierto</label>
+            </div>
+          </div>
+          <br>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-info">Registrar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+</body>
+
+
+
+</html>

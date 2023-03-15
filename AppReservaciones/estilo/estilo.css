@@ -1,0 +1,212 @@
+.header{
+    background-image: "./img/fondoHotel";
+    background-size: cover;
+    height: 40vh;
+    padding-top:5em;
+    margin-top:1em;
+    width:98%;
+    position: relative;
+    display: inline-flex;
+    
+    align-items: center;
+    opacity: 0.9;
+    justify-content: space-around;
+}
+.formulario{
+    width:100%;
+    display:block;
+    padding: 10px;
+    
+    align-items:center;
+    text-align:center;
+    justify-content:space-around;
+}
+.barra-busqueda{
+    width:90% !important;
+    padding-left:25%;
+    align-items:center;
+    text-align:center;
+    text-align:center;
+   
+}
+.contenedorBotones{
+    display: block;
+    padding: 10px;
+    align-items:center;
+    text-align:center;
+    justify-content:space-around;
+    padding-top:5%;
+    
+}
+.tabla{
+    width:100%;
+    font-size: 10px;
+    display:inline-block;
+    
+}
+th,td{
+    width:fit-content;
+}
+
+.espacio{
+    background-color: #8A1212;
+    display: block;
+    border-radius: 30px;
+    width: 48%;
+    
+    display:inline-block;
+
+    text-align:center;
+    
+    box-shadow: 5px 5px 5px 5px #2B0202;
+}
+.espacio img{
+    border-radius: 30px;
+    border-style: inset;
+    box-shadow: 3px 3px 3px 3px black;
+}
+.espacio h2{
+    border-radius: 10px;
+    background:
+    radial-gradient(circle at 0% 50%, rgba(96, 16, 48, 0) 9px, #613 10px, rgba(96, 16, 48, 0) 11px) 0px 10px,
+    radial-gradient(at 100% 100%,      rgba(96, 16, 48, 0) 9px, #613 10px, rgba(96, 16, 48, 0) 11px),
+    rgb(23, 24, 22);
+    height:10%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-shadow: 3px 3px 3px 3px black;
+}
+.descripcion{
+    background-color: #360202;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius:15px;
+    box-shadow: 3px 3px 3px 3px black;
+}
+.boton{
+    border-radius: 10px;
+    background-color: #269;
+    min-width:25%;
+    min-height: 25%;
+    box-shadow: 3px 3px 3px 3px black;
+    text-decoration: none;
+    color:white;
+}
+.boton:hover{
+    box-shadow: none;
+    background-color: red;
+}
+.perfil{
+    position: absolute;
+    text-align: center;
+    padding: .5em;
+    width:100%;
+    display:block;
+    justify-content: center;
+    flex-direction: column;
+    
+    
+
+}
+.titulo{
+    color: black;
+    font-weight: bolder;
+    background-color: white;
+    width: 20%;
+    justify-content: center;
+    text-align:center;
+    margin-left: 40%;
+    
+
+}
+.titular{
+    background-color: #2B0202;
+    border-radius: 20px;
+    color:white;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 3px 3px 3px 3px royalblue;
+    width:98%;
+}
+.navegacion{
+    
+    background:
+radial-gradient(circle at 0% 50%, rgba(96, 16, 48, 0) 9px, #613 10px, rgba(96, 16, 48, 0) 11px) 0px 10px,
+radial-gradient(at 100% 100%,      rgba(96, 16, 48, 0) 9px, #613 10px, rgba(96, 16, 48, 0) 11px),
+rgb(23, 24, 22);
+background-size: 20px 20px;
+    display: flex;    
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 15%;
+    margin: 0.2em;
+    color: white;
+    padding-left:7%;
+    width:98%;
+    
+}
+.contacto a{
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: .5em;
+    background: rgba(7, 7, 7, 0.7);
+    color: white;
+}
+.contacto a:hover{
+    background: rgb(20, 77, 104);
+}
+.cuerpo{
+    background-color: black;
+background-size: 20px 20px;
+      
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 15%;
+   /* margin-left: 25%;
+    margin-right:25%;*/
+    color: white;
+   
+}
+.section{
+    padding: 1em 4em 1em 4em;
+    }
+    .section .h2{
+        padding: .5em;
+        padding-left:2em;
+        font-size: 2em;
+        text-align: center;
+        color: #070707;
+        background: white;
+        border-radius: 10px;
+    }
+.article{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        
+        
+    }
+    .article img{
+        width: 25%;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+    .article .info-article{
+        width: 70%;
+        padding: 2em;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background-color:#269;
+        font-size: 20px;
+        
+       
+    }

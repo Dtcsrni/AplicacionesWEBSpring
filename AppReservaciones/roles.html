@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ES">
+<head>
+    <link rel="stylesheet" href="./estilo/estilo.css">
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/509945622e.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Gestión de Espacio</title>
+</head>
+<body class="cuerpo">
+    <header class="header">
+        <img src="./img/fondoHotel.jpg" width=100% height=200%>
+        <div class="perfil">
+            <img src="./img/logoHotel.png">
+            <h1 class="titulo">Hotel CUH</h1>
+        </div>
+    </header>
+    <div class="navegacion">
+      <nav>
+  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true"><i class="fa fa-home" aria-hidden="true"></i> |Inicio|</a>
+    <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false"><i class="fa fa-book" aria-hidden="true"></i><i class="fa fa-book" aria-hidden="true"></i> |Reservaciones|</a>
+    <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false"><i class="fa fa-user-plus" aria-hidden="true"></i> |Usuarios|</a>
+    <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false"><i class="fa fa-sign-out" aria-hidden="true"></i>|Salir|</a>
+  </div>
+</nav>
+   
+    </div>
+<div class="titular">
+<h2><i class="fa fa-user-plus" aria-hidden="true"></i> Gestion de Roles</h2>
+</div>
+<div >
+    <br>
+    <table class="table table-dark">
+        <thead>
+          <tr>
+            <th scope="col">ID de Rol</th>
+            <th scope="col">Nombre de Rol</th>
+            <th scope="col">Crear eventos</th>
+            <th scope="col">Modificar eventos</th>
+            <th scope="col">Agregar usuarios</th>
+            <th scope="col">Modificar usuarios</th>
+            <th scope="col">Vender boletos</th>
+            <th scope="col">Comprar boletos</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>001</td>
+            <td>Administrador</td>
+            <td><input type="checkbox" id="crear_eventos" name="crear_eventos" checked="true"></td>
+            <td><input type="checkbox" id="modificar_eventos" name="modificar_eventos" checked="true"></td>
+            <td><input type="checkbox" id="agregar_usuarios" name="agregar_usuarios" checked="true"></td>
+            <td><input type="checkbox" id="modificar_usuarios" name="modificar_usuarios" checked="true"></td>
+            <td><input type="checkbox" id="vender_boletos" name="vender_boletos" checked="true"></td>
+            <td><input type="checkbox" id="comprar_boletos" name="comprar_boletos" checked="false"></td>
+          </tr>
+          <tr>
+            <td>002</td>
+            <td>Gestor</td>
+            <td><input type="checkbox" id="crear_eventos" name="crear_eventos" checked="false"></td>
+            <td><input type="checkbox" id="modificar_eventos" name="modificar_eventos" checked="true"></td>
+            <td><input type="checkbox" id="agregar_usuarios" name="agregar_usuarios" checked="false"></td>
+            <td><input type="checkbox" id="modificar_usuarios" name="modificar_usuarios" checked="false"></td>
+            <td><input type="checkbox" id="vender_boletos" name="vender_boletos" checked="true"></td>
+                      <td><input type="checkbox" id="comprar_boletos" name="comprar_boletos" checked="false"></td>
+          </tr>
+          <tr>
+            <td>003</td>
+            <td>Cliente</td>
+            <td><input type="checkbox" id="crear_eventos" name="crear_eventos" checked="false"></td>
+            <td><input type="checkbox" id="modificar_eventos" name="modificar_eventos" checked="false"></td>
+            <td><input type="checkbox" id="agregar_usuarios" name="agregar_usuarios" checked="false"></td>
+            <td><input type="checkbox" id="modificar_usuarios" name="modificar_usuarios" checked="false"></td>
+            <td><input type="checkbox" id="vender_boletos" name="vender_boletos" checked="false"></td>
+            <td><input type="checkbox" id="comprar_boletos" name="comprar_boletos" checked="true"></td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <div>
+        <p>
+            <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+              Link with href
+            </a>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+              Button with data-target
+            </button>
+          </p>
+          <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+            </div>
+          </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" class="btn btn-info">Modificar Roles</button>
+        </div>
+      </div>
+</div>
+
+</body>
+
+
+
+</html>
