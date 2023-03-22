@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<HTML lang="ES">
+<HTML lang="ES" xmlns:th="http://www.thymeleaf.org">
 <head>
     <link rel="stylesheet" href="./estilo/estilo.css">
     <meta charset="UTF-8">
@@ -7,14 +7,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - APP Reservas</title>
+    <title th:text="${sitio.nombre}">Contacto - APP Reservas</title>
 </head>
 <body class="cuerpo">
     <header class="header">
-        <img src="./img/fondoHotel.jpg" width=100% height=200%>
+        <img th:src="@{/img/fondoHotel.jpg}" width=100% height=200%>
         <div class="perfil">
-            <img src="./img/logoHotel.png">
-            <h1 class="titulo">Hotel CUH</h1>
+            <img th:src="@{/img/logoHotel.png}">
+            <h1 th:text="${negocio.nombre}" class="titulo">Hotel CUH</h1>
         </div>
     </header>
     <div class="navegacion">
@@ -32,34 +32,26 @@
 </div>
     <section id="espacios" class="row">
         <div class="col-xs-6">
-        <div class="espacio ">
-        <h2>Cuarto Pequeño</h2>
-        <article>
-            <img src="img/cuartoRenta.jpg">
-            <div class="info-article">
-                <div class="descripcion">
-                <p>Se renta cuarto para una persona, amueblado, un solo baño.</p>
+        <ul th:each="espacio: ${espacios}">
+            <li>
+                <div class="espacio ">
+                    <h2 th:text="${espacio.nombre}">Cuarto Pequeño</h2>
+                    <article >
+                        <img th:src="${espacio.img}">
+                        <div class="info-article">
+                            <div class="descripcion">
+                            <p th:text="${espacio.descripcion}">Se renta cuarto para una persona, amueblado, un solo baño.</p>
+                            </div>
+                            <a th:href="@{/detalles/{id}(id=${espacio.id})}" target="_blank" class="boton">Ver Detalles</a>
+                            
+                            </div>
+            
+                    </article>
                 </div>
-                <a href="#" target="_blank" class="boton">Ver Detalles</a>
-                
-                </div>
+            </li>
+        </ul>
+        
 
-        </article>
-    </div>
-    <div class="espacio">
-        <h2>Cuarto Grande</h2>
-        <article>
-            <img src="img/cuartoRenta.jpg">
-            <div class="info-article">
-                <div class="descripcion">
-                <p>Se renta cuarto grande para 5 personas, amueblado, un solo baño.</p>
-                </div>
-                <a href="#" target="_blank" class="boton">Ver Detalles</a>
-                
-                </div>
-
-        </article>
-    </div>
 </div>
     </section>
 </body>

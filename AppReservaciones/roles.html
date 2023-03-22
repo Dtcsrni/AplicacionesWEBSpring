@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ES">
+<html lang="ES" xmlns:th="http://www.thymeleaf.org">
 <head>
     <link rel="stylesheet" href="./estilo/estilo.css">
     <meta charset="UTF-8">
@@ -12,12 +12,12 @@
 </head>
 <body class="cuerpo">
     <header class="header">
-        <img src="./img/fondoHotel.jpg" width=100% height=200%>
-        <div class="perfil">
-            <img src="./img/logoHotel.png">
-            <h1 class="titulo">Hotel CUH</h1>
-        </div>
-    </header>
+      <img th:src="@{/img/fondoHotel.jpg}" width=100% height=200%>
+      <div class="perfil">
+          <img th:src="@{/img/logoHotel.png}">
+          <h1 th:text="${negocio.nombre}" class="titulo">Hotel CUH</h1>
+      </div>
+  </header>
     <div class="navegacion">
       <nav>
   <div class="nav nav-tabs" id="nav-tab" role="tablist">
@@ -45,64 +45,50 @@
             <th scope="col">Modificar usuarios</th>
             <th scope="col">Vender boletos</th>
             <th scope="col">Comprar boletos</th>
+            <th scope="col">Eliminar Rol</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>001</td>
-            <td>Administrador</td>
-            <td><input type="checkbox" id="crear_eventos" name="crear_eventos" checked="true"></td>
-            <td><input type="checkbox" id="modificar_eventos" name="modificar_eventos" checked="true"></td>
-            <td><input type="checkbox" id="agregar_usuarios" name="agregar_usuarios" checked="true"></td>
-            <td><input type="checkbox" id="modificar_usuarios" name="modificar_usuarios" checked="true"></td>
-            <td><input type="checkbox" id="vender_boletos" name="vender_boletos" checked="true"></td>
-            <td><input type="checkbox" id="comprar_boletos" name="comprar_boletos" checked="false"></td>
+          <form action="#" th:action="@{/eliminar}">
+          <tr th:each="rol: ${roles}">
+            <td th:text="${rol.id}">001</td>
+            <td th:text="${rol.nombre}">Administrador</td>
+            <td><input type="checkbox" id="crear_eventos" name="crear_eventos" th:checked="${rol.crear_eventos} == 1"></td>
+            <td><input type="checkbox" id="modificar_eventos" name="modificar_eventos" th:checked="${rol.modificar_eventos} == 1"></td>
+            <td><input type="checkbox" id="agregar_usuarios" name="agregar_usuarios" th:checked="${rol.agregar_usuarios} == 1"></td>
+            <td><input type="checkbox" id="modificar_usuarios" name="modificar_usuarios" th:checked="${rol.modificar_usuarios} == 1"></td>
+            <td><input type="checkbox" id="vender_boletos" name="vender_boletos" th:checked="${rol.vender_boletos} == 1"></td>
+            <td><input type="checkbox" id="comprar_boletos" name="comprar_boletos" th:checked="${rol.comprar_boletos} == 1"></td>
+            <td><div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                  <button type="submit" class="btn btn-danger">Eliminar Rol</button>
+                </div>
+              </div></td>
           </tr>
-          <tr>
-            <td>002</td>
-            <td>Gestor</td>
-            <td><input type="checkbox" id="crear_eventos" name="crear_eventos" checked="false"></td>
-            <td><input type="checkbox" id="modificar_eventos" name="modificar_eventos" checked="true"></td>
-            <td><input type="checkbox" id="agregar_usuarios" name="agregar_usuarios" checked="false"></td>
-            <td><input type="checkbox" id="modificar_usuarios" name="modificar_usuarios" checked="false"></td>
-            <td><input type="checkbox" id="vender_boletos" name="vender_boletos" checked="true"></td>
-                      <td><input type="checkbox" id="comprar_boletos" name="comprar_boletos" checked="false"></td>
-          </tr>
-          <tr>
-            <td>003</td>
-            <td>Cliente</td>
-            <td><input type="checkbox" id="crear_eventos" name="crear_eventos" checked="false"></td>
-            <td><input type="checkbox" id="modificar_eventos" name="modificar_eventos" checked="false"></td>
-            <td><input type="checkbox" id="agregar_usuarios" name="agregar_usuarios" checked="false"></td>
-            <td><input type="checkbox" id="modificar_usuarios" name="modificar_usuarios" checked="false"></td>
-            <td><input type="checkbox" id="vender_boletos" name="vender_boletos" checked="false"></td>
-            <td><input type="checkbox" id="comprar_boletos" name="comprar_boletos" checked="true"></td>
-          </tr>
+        </form>
+         
         </tbody>
       </table>
       <br>
       <div>
-        <p>
-            <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-              Link with href
-            </a>
-            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-              Button with data-target
-            </button>
-          </p>
-          <div class="collapse" id="collapseExample">
-            <div class="card card-body">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+        <form action="#" th:action="@{/crear}">
+        <div class="form-group row col-xs-2">
+            <label class="control-label col-sm-2" for="id">Nombre de Rol</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="id" placeholder="Indique el nombre del rol">
             </div>
           </div>
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-info">Crear Rol</button>
+            </div>
+          </div>
+          <br>
+          <br>
+        </form>
       </div>
 
-      <div class="form-group">
-        <div class="col-sm-offset-2 col-sm-10">
-          <button type="submit" class="btn btn-info">Modificar Roles</button>
-        </div>
       </div>
-</div>
 
 </body>
 

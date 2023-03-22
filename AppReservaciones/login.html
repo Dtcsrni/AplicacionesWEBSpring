@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ES">
+<html lang="ES" xmlns:th="http://www.thymeleaf.org">
 <head>
     <link rel="stylesheet" href="./estilo/estiloLogin.css">
     <meta charset="utf-8">
@@ -20,17 +20,17 @@
         </div>
     </header>
     <div class="formulario">
-    <form>
+    <form action="#" th:action="@{/loguear}">
         <div class="form-group">
           <label for="exampleInputEmail1">Correo Electrónico</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Escriba su correo">
+          <input th:field="{correo}" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Escriba su correo">
           <small id="emailHelp" class="smallEstilo">Su correo no será compartido publicamente</small>
         </div>
         <br>
         <br>
         <div class="form-group">
           <label for="exampleInputPassword1">Contraseña</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Introduzca su contraseña">
+          <input th:field="{contrasenia}" type="password" class="form-control" id="exampleInputPassword1" placeholder="Introduzca su contraseña">
         </div>
         <div class="form-check">
             <br>
@@ -38,7 +38,7 @@
           
           <label class="form-check-label" for="exampleCheck1">Recuérdame</label>
         </div>
-        <button type="submit" class="btn btn-primary">Enviar</button>
+        <button  type="submit" class="btn btn-primary">Enviar</button>
       </form>
     </div>
 
